@@ -14,6 +14,9 @@ router.get("/reset-sensors", async (req, res) => {
 });
 
 // ✅ Rutas específicas
+router.get("/keep-alive", async (req, res) => {
+  return res.json({ message: "✅ keep-alive" });
+});
 router.delete("/cleanup", deleteAllSensorRecords);  // 🔥 Se cambia de "/cleanup" a "/cleanup-all"
 router.get("/start-generation", startGeneration);
 router.get("/stop-generation", stopGeneration);
